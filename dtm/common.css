@@ -1,0 +1,30 @@
+body{
+	background-color:papayawhip;
+}
+h1{
+	color:gray;
+	height: 100px;
+}
+.products{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+}
+
+a{
+	color:lightgray;
+}
+
+div{
+	flex-basis:30%;
+	height:200px;
+	max-width:200px;
+	cursor:pointer;
+	margin-top:10px;
+	min-width:200px;
+}
+
+button{
+	cursor:pointer;
+}

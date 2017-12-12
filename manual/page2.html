@@ -1,0 +1,55 @@
+<!DOCTYPE>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles2.css">
+	<link rel="stylesheet" type="text/css" href="common.css">
+
+	<script language="JavaScript" type="text/javascript" src="AppMeasurement_JavaScript/VisitorAPI.js"></script>
+	<script language="JavaScript" type="text/javascript" src="AppMeasurement_JavaScript/AppMeasurement.js"></script>
+
+	<title>Sweet Site</title>
+</head>
+<body>
+	<Script>
+		var s=s_gi("lscsmanualsetupgarrett");
+		/* You may give each page an identifying name, server, and channel on
+		the next lines. */
+		s.pageName=document.title
+		s.server="cardgage.sc.omtrdc.net"
+		s.channel="SweetChannel"
+		s.pageType="SweetPageType"
+		s.prop1="test prop 1!"
+		/* Conversion Variables */
+		s.campaign="Sweet Campaign"
+		s.state="Sweet State"
+		s.zip="Sweet Zip"
+		s.events=""
+		s.products=""
+		s.purchaseID=""
+		s.eVar1="This is an initial evar1"
+		//s.t() function sends the image request. 
+		var s_code=s.t();
+		if(s_code)document.write(s_code)
+	</Script>
+<h1>Page 2
+<a href="page1.html" >Go to page 1</a>
+</h1>
+<div id="test">Div 1</div>
+<div>Page 2 Div 2</div>
+<div>Page 2 Div 3</div>
+<div>Page 2 Div 4</div>
+<div>Page 2 Div 5</div>
+
+
+<script>
+		var divs = document.getElementsByTagName("div");		
+		for(var i = 0; i<divs.length; i++){
+			divs[i].onclick = function(event) {
+			console.log(event.target.innerHTML + " was clicked")
+			s.prop2=event.target.innerHTML + " was clicked";
+			s.t();
+		  }
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,1972 @@
+
+json-schema Content
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "geolocation": {
+      "type": "object",
+      "properties": {
+        "latitude": {
+          "type": "number"
+        },
+        "longitude": {
+          "type": "number"
+        },
+        "generatedThumbnail": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "latitude",
+        "longitude",
+        "generatedThumbnail"
+      ]
+    },
+    "surferinfo": {
+      "type": "object",
+      "properties": {
+        "display": {
+          "type": "object",
+          "properties": {
+            "resolution": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "width",
+                "height"
+              ]
+            },
+            "devicePixelRatio": {
+              "type": "integer"
+            },
+            "colorDepth": {
+              "type": "integer"
+            },
+            "nrOfColors": {
+              "type": "integer"
+            },
+            "pixelsPerInch": {
+              "type": "integer"
+            },
+            "orientation": {
+              "type": "object",
+              "properties": {
+                "mode": {
+                  "type": "string"
+                },
+                "direction": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "mode",
+                "direction"
+              ]
+            }
+          },
+          "required": [
+            "resolution",
+            "devicePixelRatio",
+            "colorDepth",
+            "nrOfColors",
+            "pixelsPerInch",
+            "orientation"
+          ]
+        },
+        "window": {
+          "type": "object",
+          "properties": {
+            "dimension": {
+              "type": "object",
+              "properties": {
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "width",
+                "height"
+              ]
+            },
+            "percentageUsage": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "dimension",
+            "percentageUsage"
+          ]
+        },
+        "browser": {
+          "type": "object",
+          "properties": {
+            "version": {
+              "type": "string"
+            },
+            "family": {
+              "type": "string"
+            },
+            "userAgent": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "version",
+            "family",
+            "userAgent"
+          ]
+        },
+        "device": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "type",
+            "model",
+            "version"
+          ]
+        },
+        "isMobile": {
+          "type": "boolean"
+        },
+        "os": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "version"
+          ]
+        },
+        "year": {
+          "type": "integer"
+        },
+        "month": {
+          "type": "integer"
+        },
+        "day": {
+          "type": "integer"
+        },
+        "hour": {
+          "type": "integer"
+        },
+        "minutes": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "display",
+        "window",
+        "browser",
+        "device",
+        "isMobile",
+        "os",
+        "year",
+        "month",
+        "day",
+        "hour",
+        "minutes"
+      ]
+    },
+    "profile": {
+      "type": "object",
+      "properties": {
+        "displayName": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "avatar": {
+          "type": "string"
+        },
+        "isLoggedIn": {
+          "type": "boolean"
+        },
+        "isLoggedIn_xss": {
+          "type": "string"
+        },
+        "authorizableId": {
+          "type": "string"
+        },
+        "authorizableId_xss": {
+          "type": "string"
+        },
+        "formattedName_xss": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "displayName",
+        "path",
+        "avatar",
+        "isLoggedIn",
+        "isLoggedIn_xss",
+        "authorizableId",
+        "authorizableId_xss",
+        "formattedName_xss"
+      ]
+    },
+    "emulators": {
+      "type": "object",
+      "properties": {
+        "devices": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "platform": {
+                "type": "string"
+              },
+              "platformVersion": {
+                "type": "string"
+              },
+              "width": {
+                "type": "integer"
+              },
+              "height": {
+                "type": "integer"
+              },
+              "canRotate": {
+                "type": "boolean"
+              },
+              "orientation": {
+                "type": "string"
+              },
+              "device-pixel-ratio": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "id",
+              "title",
+              "type",
+              "platform",
+              "platformVersion",
+              "width",
+              "height",
+              "canRotate",
+              "orientation",
+              "device-pixel-ratio"
+            ]
+          }
+        },
+        "currentDeviceId": {
+          "type": "string"
+        },
+        "orientations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "title"
+            ]
+          }
+        },
+        "currentDevice": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "orientation": {
+              "type": "string"
+            },
+            "platform": {
+              "type": "string"
+            },
+            "platformVersion": {
+              "type": "string"
+            },
+            "canRotate": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "type",
+            "width",
+            "height",
+            "orientation",
+            "platform",
+            "platformVersion",
+            "canRotate"
+          ]
+        }
+      },
+      "required": [
+        "devices",
+        "currentDeviceId",
+        "orientations",
+        "currentDevice"
+      ]
+    },
+    "eventdata": {
+      "type": "null"
+    },
+    "pagedata": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "hits": {
+          "type": "integer"
+        },
+        "navTitle": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "string"
+        },
+        "sitesection": {
+          "type": "string"
+        },
+        "_": {
+          "type": "object",
+          "properties": {}
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "path",
+        "hits",
+        "navTitle",
+        "tags",
+        "sitesection",
+        "_"
+      ]
+    },
+    "segmentation": {
+      "type": "object",
+      "properties": {
+        "_": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "url"
+          ]
+        },
+        "segments": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "label": {
+                "type": "string"
+              },
+              "link": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "label",
+              "link",
+              "path"
+            ]
+          }
+        },
+        "summary": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "_",
+        "segments",
+        "summary"
+      ]
+    },
+    "abandonedproducts": {
+      "type": "object",
+      "properties": {
+        "tickle": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tickle"
+      ]
+    },
+    "recentlyviewed": {
+      "type": "object",
+      "properties": {
+        "tickle": {
+          "type": "integer"
+        },
+        "products": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "path": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "price": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "path",
+              "title",
+              "image",
+              "price"
+            ]
+          }
+        }
+      },
+      "required": [
+        "tickle",
+        "products"
+      ]
+    },
+    "cart": {
+      "type": "object",
+      "properties": {
+        "entries": {
+          "type": "array",
+          "items": {}
+        },
+        "promotions": {
+          "type": "array",
+          "items": {}
+        },
+        "vouchers": {
+          "type": "array",
+          "items": {}
+        },
+        "totalPrice": {
+          "type": "string"
+        },
+        "totalPriceFloat": {
+          "type": "integer"
+        },
+        "promotionsMap": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "segments": {
+                "type": "string"
+              },
+              "path": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "segments",
+              "path"
+            ]
+          }
+        },
+        "_": {
+          "type": "object",
+          "properties": {
+            "response-time": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "response-time"
+          ]
+        }
+      },
+      "required": [
+        "entries",
+        "promotions",
+        "vouchers",
+        "totalPrice",
+        "totalPriceFloat",
+        "promotionsMap",
+        "_"
+      ]
+    },
+    "orderhistory": {
+      "type": "object",
+      "properties": {
+        "traits": {
+          "type": "object",
+          "properties": {
+            "generic": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "data": {
+                  "type": "object",
+                  "properties": {
+                    "itemcount": {
+                      "type": "integer"
+                    },
+                    "productcount": {
+                      "type": "integer"
+                    },
+                    "valueformatted": {
+                      "type": "string"
+                    },
+                    "ordercount": {
+                      "type": "integer"
+                    },
+                    "ordervalue": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "itemcount",
+                    "productcount",
+                    "valueformatted",
+                    "ordercount",
+                    "ordervalue"
+                  ]
+                }
+              },
+              "required": [
+                "name",
+                "data"
+              ]
+            }
+          },
+          "required": [
+            "generic"
+          ]
+        },
+        "_": {
+          "type": "object",
+          "properties": {
+            "url": {
+              "type": "string"
+            },
+            "response-time": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "url",
+            "response-time"
+          ]
+        }
+      },
+      "required": [
+        "traits",
+        "_"
+      ]
+    },
+    "relatedproducts": {
+      "type": "array",
+      "items": {}
+    }
+  },
+  "required": [
+    "geolocation",
+    "surferinfo",
+    "profile",
+    "emulators",
+    "eventdata",
+    "pagedata",
+    "segmentation",
+    "abandonedproducts",
+    "recentlyviewed",
+    "cart",
+    "orderhistory",
+    "relatedproducts"
+  ]
+}
+Code View
+1 Note Since Last Approval
+Added by Garrett Hartley
+December 08, 2017 03:20 PM
+note
+
+Close
+Code Contents View
+
+1
+{
+2
+  "$schema": "http://json-schema.org/draft-04/schema#",
+3
+  "type": "object",
+4
+  "properties": {
+5
+    "geolocation": {
+6
+      "type": "object",
+7
+      "properties": {
+8
+        "latitude": {
+9
+          "type": "number"
+10
+        },
+11
+        "longitude": {
+12
+          "type": "number"
+13
+        },
+14
+        "generatedThumbnail": {
+15
+          "type": "string"
+16
+        }
+17
+      },
+18
+      "required": [
+19
+        "latitude",
+20
+        "longitude",
+21
+        "generatedThumbnail"
+22
+      ]
+23
+    },
+24
+    "surferinfo": {
+25
+      "type": "object",
+26
+      "properties": {
+27
+        "display": {
+28
+          "type": "object",
+29
+          "properties": {
+30
+            "resolution": {
+31
+              "type": "object",
+32
+              "properties": {
+33
+                "width": {
+34
+                  "type": "integer"
+35
+                },
+36
+                "height": {
+37
+                  "type": "integer"
+38
+                }
+39
+              },
+40
+              "required": [
+41
+                "width",
+42
+                "height"
+43
+              ]
+44
+            },
+45
+            "devicePixelRatio": {
+46
+              "type": "integer"
+47
+            },
+48
+            "colorDepth": {
+49
+              "type": "integer"
+50
+            },
+51
+            "nrOfColors": {
+52
+              "type": "integer"
+53
+            },
+54
+            "pixelsPerInch": {
+55
+              "type": "integer"
+56
+            },
+57
+            "orientation": {
+58
+              "type": "object",
+59
+              "properties": {
+60
+                "mode": {
+61
+                  "type": "string"
+62
+                },
+63
+                "direction": {
+64
+                  "type": "string"
+65
+                }
+66
+              },
+67
+              "required": [
+68
+                "mode",
+69
+                "direction"
+70
+              ]
+71
+            }
+72
+          },
+73
+          "required": [
+74
+            "resolution",
+75
+            "devicePixelRatio",
+76
+            "colorDepth",
+77
+            "nrOfColors",
+78
+            "pixelsPerInch",
+79
+            "orientation"
+80
+          ]
+81
+        },
+82
+        "window": {
+83
+          "type": "object",
+84
+          "properties": {
+85
+            "dimension": {
+86
+              "type": "object",
+87
+              "properties": {
+88
+                "width": {
+89
+                  "type": "integer"
+90
+                },
+91
+                "height": {
+92
+                  "type": "integer"
+93
+                }
+94
+              },
+95
+              "required": [
+96
+                "width",
+97
+                "height"
+98
+              ]
+99
+            },
+100
+            "percentageUsage": {
+101
+              "type": "number"
+102
+            }
+103
+          },
+104
+          "required": [
+105
+            "dimension",
+106
+            "percentageUsage"
+107
+          ]
+108
+        },
+109
+        "browser": {
+110
+          "type": "object",
+111
+          "properties": {
+112
+            "version": {
+113
+              "type": "string"
+114
+            },
+115
+            "family": {
+116
+              "type": "string"
+117
+            },
+118
+            "userAgent": {
+119
+              "type": "string"
+120
+            }
+121
+          },
+122
+          "required": [
+123
+            "version",
+124
+            "family",
+125
+            "userAgent"
+126
+          ]
+127
+        },
+128
+        "device": {
+129
+          "type": "object",
+130
+          "properties": {
+131
+            "category": {
+132
+              "type": "string"
+133
+            },
+134
+            "type": {
+135
+              "type": "string"
+136
+            },
+137
+            "model": {
+138
+              "type": "string"
+139
+            },
+140
+            "version": {
+141
+              "type": "string"
+142
+            }
+143
+          },
+144
+          "required": [
+145
+            "category",
+146
+            "type",
+147
+            "model",
+148
+            "version"
+149
+          ]
+150
+        },
+151
+        "isMobile": {
+152
+          "type": "boolean"
+153
+        },
+154
+        "os": {
+155
+          "type": "object",
+156
+          "properties": {
+157
+            "name": {
+158
+              "type": "string"
+159
+            },
+160
+            "version": {
+161
+              "type": "string"
+162
+            }
+163
+          },
+164
+          "required": [
+165
+            "name",
+166
+            "version"
+167
+          ]
+168
+        },
+169
+        "year": {
+170
+          "type": "integer"
+171
+        },
+172
+        "month": {
+173
+          "type": "integer"
+174
+        },
+175
+        "day": {
+176
+          "type": "integer"
+177
+        },
+178
+        "hour": {
+179
+          "type": "integer"
+180
+        },
+181
+        "minutes": {
+182
+          "type": "integer"
+183
+        }
+184
+      },
+185
+      "required": [
+186
+        "display",
+187
+        "window",
+188
+        "browser",
+189
+        "device",
+190
+        "isMobile",
+191
+        "os",
+192
+        "year",
+193
+        "month",
+194
+        "day",
+195
+        "hour",
+196
+        "minutes"
+197
+      ]
+198
+    },
+199
+    "profile": {
+200
+      "type": "object",
+201
+      "properties": {
+202
+        "displayName": {
+203
+          "type": "string"
+204
+        },
+205
+        "path": {
+206
+          "type": "string"
+207
+        },
+208
+        "avatar": {
+209
+          "type": "string"
+210
+        },
+211
+        "isLoggedIn": {
+212
+          "type": "boolean"
+213
+        },
+214
+        "isLoggedIn_xss": {
+215
+          "type": "string"
+216
+        },
+217
+        "authorizableId": {
+218
+          "type": "string"
+219
+        },
+220
+        "authorizableId_xss": {
+221
+          "type": "string"
+222
+        },
+223
+        "formattedName_xss": {
+224
+          "type": "string"
+225
+        }
+226
+      },
+227
+      "required": [
+228
+        "displayName",
+229
+        "path",
+230
+        "avatar",
+231
+        "isLoggedIn",
+232
+        "isLoggedIn_xss",
+233
+        "authorizableId",
+234
+        "authorizableId_xss",
+235
+        "formattedName_xss"
+236
+      ]
+237
+    },
+238
+    "emulators": {
+239
+      "type": "object",
+240
+      "properties": {
+241
+        "devices": {
+242
+          "type": "array",
+243
+          "items": {
+244
+            "type": "object",
+245
+            "properties": {
+246
+              "id": {
+247
+                "type": "string"
+248
+              },
+249
+              "title": {
+250
+                "type": "string"
+251
+              },
+252
+              "type": {
+253
+                "type": "string"
+254
+              },
+255
+              "platform": {
+256
+                "type": "string"
+257
+              },
+258
+              "platformVersion": {
+259
+                "type": "string"
+260
+              },
+261
+              "width": {
+262
+                "type": "integer"
+263
+              },
+264
+              "height": {
+265
+                "type": "integer"
+266
+              },
+267
+              "canRotate": {
+268
+                "type": "boolean"
+269
+              },
+270
+              "orientation": {
+271
+                "type": "string"
+272
+              },
+273
+              "device-pixel-ratio": {
+274
+                "type": "integer"
+275
+              }
+276
+            },
+277
+            "required": [
+278
+              "id",
+279
+              "title",
+280
+              "type",
+281
+              "platform",
+282
+              "platformVersion",
+283
+              "width",
+284
+              "height",
+285
+              "canRotate",
+286
+              "orientation",
+287
+              "device-pixel-ratio"
+288
+            ]
+289
+          }
+290
+        },
+291
+        "currentDeviceId": {
+292
+          "type": "string"
+293
+        },
+294
+        "orientations": {
+295
+          "type": "array",
+296
+          "items": {
+297
+            "type": "object",
+298
+            "properties": {
+299
+              "id": {
+300
+                "type": "string"
+301
+              },
+302
+              "title": {
+303
+                "type": "string"
+304
+              }
+305
+            },
+306
+            "required": [
+307
+              "id",
+308
+              "title"
+309
+            ]
+310
+          }
+311
+        },
+312
+        "currentDevice": {
+313
+          "type": "object",
+314
+          "properties": {
+315
+            "id": {
+316
+              "type": "string"
+317
+            },
+318
+            "title": {
+319
+              "type": "string"
+320
+            },
+321
+            "type": {
+322
+              "type": "string"
+323
+            },
+324
+            "width": {
+325
+              "type": "integer"
+326
+            },
+327
+            "height": {
+328
+              "type": "integer"
+329
+            },
+330
+            "orientation": {
+331
+              "type": "string"
+332
+            },
+333
+            "platform": {
+334
+              "type": "string"
+335
+            },
+336
+            "platformVersion": {
+337
+              "type": "string"
+338
+            },
+339
+            "canRotate": {
+340
+              "type": "boolean"
+341
+            }
+342
+          },
+343
+          "required": [
+344
+            "id",
+345
+            "title",
+346
+            "type",
+347
+            "width",
+348
+            "height",
+349
+            "orientation",
+350
+            "platform",
+351
+            "platformVersion",
+352
+            "canRotate"
+353
+          ]
+354
+        }
+355
+      },
+356
+      "required": [
+357
+        "devices",
+358
+        "currentDeviceId",
+359
+        "orientations",
+360
+        "currentDevice"
+361
+      ]
+362
+    },
+363
+    "eventdata": {
+364
+      "type": "null"
+365
+    },
+366
+    "pagedata": {
+367
+      "type": "object",
+368
+      "properties": {
+369
+        "title": {
+370
+          "type": "string"
+371
+        },
+372
+        "description": {
+373
+          "type": "string"
+374
+        },
+375
+        "path": {
+376
+          "type": "string"
+377
+        },
+378
+        "hits": {
+379
+          "type": "integer"
+380
+        },
+381
+        "navTitle": {
+382
+          "type": "string"
+383
+        },
+384
+        "tags": {
+385
+          "type": "string"
+386
+        },
+387
+        "sitesection": {
+388
+          "type": "string"
+389
+        },
+390
+        "_": {
+391
+          "type": "object",
+392
+          "properties": {}
+393
+        }
+394
+      },
+395
+      "required": [
+396
+        "title",
+397
+        "description",
+398
+        "path",
+399
+        "hits",
+400
+        "navTitle",
+401
+        "tags",
+402
+        "sitesection",
+403
+        "_"
+404
+      ]
+405
+    },
+406
+    "segmentation": {
+407
+      "type": "object",
+408
+      "properties": {
+409
+        "_": {
+410
+          "type": "object",
+411
+          "properties": {
+412
+            "url": {
+413
+              "type": "string"
+414
+            }
+415
+          },
+416
+          "required": [
+417
+            "url"
+418
+          ]
+419
+        },
+420
+        "segments": {
+421
+          "type": "array",
+422
+          "items": {
+423
+            "type": "object",
+424
+            "properties": {
+425
+              "label": {
+426
+                "type": "string"
+427
+              },
+428
+              "link": {
+429
+                "type": "string"
+430
+              },
+431
+              "path": {
+432
+                "type": "string"
+433
+              }
+434
+            },
+435
+            "required": [
+436
+              "label",
+437
+              "link",
+438
+              "path"
+439
+            ]
+440
+          }
+441
+        },
+442
+        "summary": {
+443
+          "type": "string"
+444
+        }
+445
+      },
+446
+      "required": [
+447
+        "_",
+448
+        "segments",
+449
+        "summary"
+450
+      ]
+451
+    },
+452
+    "abandonedproducts": {
+453
+      "type": "object",
+454
+      "properties": {
+455
+        "tickle": {
+456
+          "type": "integer"
+457
+        }
+458
+      },
+459
+      "required": [
+460
+        "tickle"
+461
+      ]
+462
+    },
+463
+    "recentlyviewed": {
+464
+      "type": "object",
+465
+      "properties": {
+466
+        "tickle": {
+467
+          "type": "integer"
+468
+        },
+469
+        "products": {
+470
+          "type": "array",
+471
+          "items": {
+472
+            "type": "object",
+473
+            "properties": {
+474
+              "path": {
+475
+                "type": "string"
+476
+              },
+477
+              "title": {
+478
+                "type": "string"
+479
+              },
+480
+              "image": {
+481
+                "type": "string"
+482
+              },
+483
+              "price": {
+484
+                "type": "string"
+485
+              }
+486
+            },
+487
+            "required": [
+488
+              "path",
+489
+              "title",
+490
+              "image",
+491
+              "price"
+492
+            ]
+493
+          }
+494
+        }
+495
+      },
+496
+      "required": [
+497
+        "tickle",
+498
+        "products"
+499
+      ]
+500
+    },
+501
+    "cart": {
+502
+      "type": "object",
+503
+      "properties": {
+504
+        "entries": {
+505
+          "type": "array",
+506
+          "items": {}
+507
+        },
+508
+        "promotions": {
+509
+          "type": "array",
+510
+          "items": {}
+511
+        },
+512
+        "vouchers": {
+513
+          "type": "array",
+514
+          "items": {}
+515
+        },
+516
+        "totalPrice": {
+517
+          "type": "string"
+518
+        },
+519
+        "totalPriceFloat": {
+520
+          "type": "integer"
+521
+        },
+522
+        "promotionsMap": {
+523
+          "type": "array",
+524
+          "items": {
+525
+            "type": "object",
+526
+            "properties": {
+527
+              "segments": {
+528
+                "type": "string"
+529
+              },
+530
+              "path": {
+531
+                "type": "string"
+532
+              }
+533
+            },
+534
+            "required": [
+535
+              "segments",
+536
+              "path"
+537
+            ]
+538
+          }
+539
+        },
+540
+        "_": {
+541
+          "type": "object",
+542
+          "properties": {
+543
+            "response-time": {
+544
+              "type": "integer"
+545
+            }
+546
+          },
+547
+          "required": [
+548
+            "response-time"
+549
+          ]
+550
+        }
+551
+      },
+552
+      "required": [
+553
+        "entries",
+554
+        "promotions",
+555
+        "vouchers",
+556
+        "totalPrice",
+557
+        "totalPriceFloat",
+558
+        "promotionsMap",
+559
+        "_"
+560
+      ]
+561
+    },
+562
+    "orderhistory": {
+563
+      "type": "object",
+564
+      "properties": {
+565
+        "traits": {
+566
+          "type": "object",
+567
+          "properties": {
+568
+            "generic": {
+569
+              "type": "object",
+570
+              "properties": {
+571
+                "name": {
+572
+                  "type": "string"
+573
+                },
+574
+                "data": {
+575
+                  "type": "object",
+576
+                  "properties": {
+577
+                    "itemcount": {
+578
+                      "type": "integer"
+579
+                    },
+580
+                    "productcount": {
+581
+                      "type": "integer"
+582
+                    },
+583
+                    "valueformatted": {
+584
+                      "type": "string"
+585
+                    },
+586
+                    "ordercount": {
+587
+                      "type": "integer"
+588
+                    },
+589
+                    "ordervalue": {
+590
+                      "type": "integer"
+591
+                    }
+592
+                  },
+593
+                  "required": [
+594
+                    "itemcount",
+595
+                    "productcount",
+596
+                    "valueformatted",
+597
+                    "ordercount",
+598
+                    "ordervalue"
+599
+                  ]
+600
+                }
+601
+              },
+602
+              "required": [
+603
+                "name",
+604
+                "data"
+605
+              ]
+606
+            }
+607
+          },
+608
+          "required": [
+609
+            "generic"
+610
+          ]
+611
+        },
+612
+        "_": {
+613
+          "type": "object",
+614
+          "properties": {
+615
+            "url": {
+616
+              "type": "string"
+617
+            },
+618
+            "response-time": {
+619
+              "type": "integer"
+620
+            }
+621
+          },
+622
+          "required": [
+623
+            "url",
+624
+            "response-time"
+625
+          ]
+626
+        }
+627
+      },
+628
+      "required": [
+629
+        "traits",
+630
+        "_"
+631
+      ]
+632
+    },
+633
+    "relatedproducts": {
+634
+      "type": "array",
+635
+      "items": {}
+636
+    }
+637
+  },
+638
+  "required": [
+639
+    "geolocation",
+640
+    "surferinfo",
+641
+    "profile",
+642
+    "emulators",
+643
+    "eventdata",
+644
+    "pagedata",
+645
+    "segmentation",
+646
+    "abandonedproducts",
+647
+    "recentlyviewed",
+648
+    "cart",
+649
+    "orderhistory",
+650
+    "relatedproducts"
+651
+  ]
+652
+}
+653
+​
+OK
+ApproveReject
+Help Terms of Use Privacy Policy © 2017 Adobe Systems Incorporated. All Rights Reserved

@@ -1,0 +1,38 @@
+<!DOCTYPE>
+<html>
+<head>
+	<script src="//assets.adobedtm.com/e9212b521deb7c60c97ca8afdd240a86a8091475/satelliteLib-1f2e69bc785a6c84348823ee5092f1294defde58-staging.js"></script>
+		<script language="JavaScript" type="text/javascript" src="AppMeasurement_JavaScript/AppMeasurement.js"></script>
+	<link rel="stylesheet" type="text/css" href="styles2.css">
+	<link rel="stylesheet" type="text/css" href="common.css">
+	<title>Sweet Site</title>
+</head>
+<body>
+<h1>Page 2
+<a href="page1.html" >Go to page 1</a>
+</h1>
+<span class="products"> 
+<div id="div1Page2">Div 1</div>
+<div id="test2">Div 2</div>
+<div id="test3">Div 3</div>
+<div id="test4">Div 4</div>
+<div id="test5">Div 5</div>
+</span>
+<!-- <form action="confirmation.html">
+	<button type="submit" id="buttonPage2" onclick="buttonClicked(event)">Purchase</button>
+</form> -->
+<a  id="purchase">Purchase<a>
+
+<script>
+function buttonClicked(event){
+	if(event.target.innerHTML=="Has been purchased"){
+		event.target.innerHTML="purchased"
+	}
+	else{
+	 event.target.innerHTML='Has been purchased'
+    }
+}
+</script>
+<script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>

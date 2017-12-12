@@ -1,0 +1,15 @@
+div:nth-of-type(5n+1){
+	background-color:#AAC789;
+}
+div:nth-of-type(5n+2){
+	background-color:#437356;
+}
+div:nth-of-type(5n+3){
+	background-color:#1E4147;
+}
+div:nth-of-type(5n+4){
+	background-color:#F34A53;
+}
+div:nth-of-type(5n+5){
+	background-color:#FAE3B4;
+}
